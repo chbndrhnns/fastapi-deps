@@ -1,0 +1,3 @@
+fastapi==0.63
+pytest
+requests
