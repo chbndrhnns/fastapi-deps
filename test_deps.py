@@ -75,7 +75,7 @@ class TestRegistry:
         assert res.json() == {"data": "use_case"}
 
     # ok
-    async def test_can_override_controller(self, client, app):
+    def test_can_override_controller(self, client, app):
         app.dependency_overrides[Registry.controller] = self.fake_controller
         res = client.get(self.url)
         assert res.json() == {"data": "fake_controller"}
